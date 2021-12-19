@@ -1,0 +1,32 @@
+.footer-container {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  background-color: #212427;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+}
+
+.footer-text,
+.footer-icons {
+  color: rgb(186, 186, 186);
+  font-family: "Open Sans";
+}
+
+.footer-text {
+  font-size: 15px;
+}
+
+.footer-icons {
+  font-size: 30px;
+}
+
+.footer-icon {
+  cursor: pointer;
+  padding: 0 0 0 15px;
+}
+
+.footer-icon:hover {
+  color: rgb(238, 238, 238);
+}

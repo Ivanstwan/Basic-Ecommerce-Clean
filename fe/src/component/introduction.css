@@ -1,0 +1,49 @@
+:root {
+  --bg-intro-color: #2a2d43;
+  /* --bg-intro-color: #001524; */
+}
+
+.introduction {
+  min-height: 770px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(19, 19, 84); */
+  background-color: var(--bg-intro-color);
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* INTRO TEXT */
+.intro-text {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+}
+.intro-text--left {
+  flex: 1;
+  font-family: "Montserrat";
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  text-align: right;
+  margin-right: 20px;
+}
+
+.intro-text--right {
+  flex: 1;
+  font-family: "Open Sans";
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+
+  line-height: 25px;
+  margin-left: 20px;
+}

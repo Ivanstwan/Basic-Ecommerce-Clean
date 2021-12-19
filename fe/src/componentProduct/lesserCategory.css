@@ -1,0 +1,124 @@
+.lesser-product {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesser-product-container {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 1.A. TITLE */
+.lesser-product-title-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.lesser-product-title-image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesser-product-title-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lesser-product-title {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 30px;
+  width: 600px;
+}
+
+.lesser-product-title-text {
+  width: 80%;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.lesser-product-title-desc {
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* 1.B. CARD */
+.lesser-product-card-container {
+  width: 83%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 50px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.lesser-product-card {
+  width: 210px;
+  height: 330px;
+  border: 1px solid black;
+  margin: 20px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.lesser-product-card:hover {
+  transform: scale(1.03);
+}
+
+.lesser-product-image-container {
+  width: 100%;
+  height: 250px;
+  border-bottom: 1px solid black;
+}
+
+.lesser-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.lesser-product-name {
+  margin-top: 8px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.lesser-product-desc {
+  font-family: "Montserrat";
+  margin-top: 3px;
+  font-size: 13px;
+  padding: 0 8px;
+  text-align: center;
+}

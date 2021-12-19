@@ -1,0 +1,108 @@
+.home {
+  width: 100%;
+  height: 1000px;
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+/* TITLE */
+.home--title-main {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 46px;
+  font-family: "Montserrat";
+  margin-bottom: 10px;
+}
+
+.home--title-desc {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Roboto";
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.home--title {
+  height: 160px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.home--main-tile {
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+  width: 100%;
+}
+
+.home--main-tile-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+}
+
+.home--main-tile-1,
+.home--main-tile-2,
+.home--main-tile-3 {
+  flex: 1;
+  margin: 15px 0 0 15px;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home--main-tile-3 {
+  margin: 15px 15px 0 15px;
+}
+
+.home--main-tile-image {
+  width: 100%;
+  height: auto;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.home--main-tile-image:hover {
+  width: 105%;
+  height: auto;
+}
+
+/* TEXT TILE */
+.home--main-tile-text-container {
+  flex: 1;
+  margin: 15px 0 0 15px;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.home--main-tile-text-container:nth-child(3) {
+  margin: 15px 15px 0 15px;
+}
+
+.home--main-tile-text {
+  color: rgb(50, 50, 50);
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Montserrat";
+}

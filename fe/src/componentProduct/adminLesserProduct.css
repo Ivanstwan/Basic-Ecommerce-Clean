@@ -1,0 +1,130 @@
+.ad-lesser-product {
+  height: 500px;
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.ad-lesserprod-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* PREVIEW */
+.ad-lesserprod-preview {
+  width: 210px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.ad-lesserprod-card-preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.ad-lesserprod-image-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.ad-lesserprod-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.ad-lesserprod-card-title {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+
+.ad-lesserprod-card-desc {
+  text-align: center;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* INPUT */
+.ad-lesserprod-input-container {
+  width: 25%;
+  /* background-color: blue; */
+  padding: 0 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-lesserprod-input-image-container {
+  padding: 10px;
+}
+
+.ad-lesserprod-input-lesser {
+  padding: 5px;
+  width: 84%;
+  margin: 10px;
+}
+
+.ad-lesserprod-input-product-name {
+  padding: 5px;
+  width: 80%;
+  margin: 10px;
+}
+
+.ad-lesserprod-input-desc {
+  padding: 5px;
+  width: 80%;
+  margin: 10px;
+  height: 30px;
+}
+
+.ad-lesserprod-input-stock {
+  padding: 5px;
+  width: 60%;
+  margin: 10px;
+}
+
+.ad-lesserprod-input-ori,
+.ad-lesserprod-input-selling {
+  padding: 5px;
+  width: 60%;
+  margin: 10px 10px 10px 10px;
+}
+
+.ad-lesserprod-input-desc-2,
+.ad-lesserprod-input-desc-3 {
+  padding: 5px;
+  width: 80%;
+  margin: 10px;
+  height: 30px;
+}
+
+.ad-lesserprod-input-desc-2 {
+  margin-top: 20px;
+}
+
+.ad-lesserprod-input-tag {
+  margin: 0 20px;
+}

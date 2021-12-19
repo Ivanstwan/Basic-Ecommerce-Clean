@@ -1,0 +1,48 @@
+.newDesign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 2000px;
+}
+
+.newDesign-content-container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(73, 73, 247);
+  padding-top: 100px;
+}
+
+.newDesign-content-image {
+  width: 100%;
+  z-index: 3;
+}
+
+/* TEXT POSITION */
+.newDesign-content-text-position {
+  position: absolute;
+  top: 240px;
+  z-index: 1;
+}
+
+.newDesign-content-text {
+  font-size: 120px;
+  font-family: "Nuneto";
+  font-weight: 600;
+  letter-spacing: 20px;
+  background: linear-gradient(
+    0deg,
+    #2642f7 0%,
+    rgba(255, 255, 255, 1) 60%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}

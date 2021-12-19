@@ -1,0 +1,231 @@
+/* DESCRIPTION */
+/* 
+1.A. Login Side (input email, pass)
+1.B. Button Utility Side (btn login, register, forgot pass)
+2. Pict Side
+3. MESSAGE ALERT
+*/
+
+.login {
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: rgb(235, 235, 235);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 150px;
+
+  box-shadow: 0px 0px 43px -24px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 43px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 43px -24px rgba(0, 0, 0, 0.75);
+  /* border: 1px solid black; */
+}
+
+/* Pict side vs Login side */
+.login--inputside {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+.login--pictside {
+  width: 50%;
+  height: 100%;
+  /* background-color: rgb(245, 80, 80); */
+  background-image: url("https://images.unsplash.com/photo-1615678857339-4e7e51ce22db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+/* 1.A. LOGIN SIDE */
+.login--inputside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login--input {
+  margin-top: 70px;
+}
+
+/* EMAIL INPUT */
+/* PASSWORD INPUT */
+.login--input-email,
+.login--input-password {
+  width: 280px;
+  height: 50px;
+  /* border: 1px solid grey; */
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 15px;
+}
+.login--input-password {
+  margin-top: 0px;
+}
+.login--input-email-icon,
+.login--input-pass-icon {
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgba(199, 198, 198, 0.5);
+  border-radius: 10px 0 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login--input-email-box,
+.login--input-pass-box {
+  height: 50px;
+  width: 230px;
+  border-right: 2px solid rgba(199, 198, 198, 0.5);
+  border-top: 2px solid rgba(199, 198, 198, 0.5);
+  border-bottom: 2px solid rgba(199, 198, 198, 0.5);
+
+  border-radius: 0px 10px 10px 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 0 0 10px;
+}
+
+/* ICON AND INPUT  */
+.fa-user,
+.fa-key {
+  opacity: 0.5;
+}
+
+.login--input-email-here,
+.login--input-pass-here {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  height: 60%;
+  width: 95%;
+  padding-left: 10px;
+}
+
+/* 1.B. Button Utility Side */
+.login--utility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.login--util-button {
+  width: 280px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* border: 1px solid rgba(199, 198, 198, 0.5); */
+
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(71, 57, 221);
+  transition: all 0.3 ease-in-out;
+}
+
+.login--util-button-text {
+  font-size: 17px;
+  color: white;
+  font-weight: 500;
+  font-family: "Open Sans";
+  letter-spacing: 0.5px;
+}
+.login--util-button:hover {
+  background-color: rgb(39, 25, 191);
+}
+
+.login--util-notlogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login--util-forgetpass {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.login--util-forgetpass:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Line break */
+.login-breaker-or {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.login--linebreak {
+  width: 43%;
+  height: 5px;
+  border-bottom: 1px solid rgba(199, 198, 198, 0.8);
+}
+
+.login--util-register {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(71, 57, 221);
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+.login--util-register:hover {
+  color: rgb(39, 25, 191);
+}
+
+/* MESSAGE ALERT */
+.login--pass-msg,
+.login--email-msg {
+  opacity: 0;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: red;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+  /* transform: translateY(30px); */
+}
+
+/* .login--pass-msg {
+  transform: translateX(160px) translateY(-13px);
+}
+
+.login--email-msg {
+  transform: translateX(187px) translateY(-70px);
+} */
+
+.login--pass-msg.open,
+.login--email-msg.open {
+  opacity: 1;
+}

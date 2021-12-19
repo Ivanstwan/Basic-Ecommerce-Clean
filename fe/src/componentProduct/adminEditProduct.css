@@ -1,0 +1,71 @@
+.adm-restock {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.adm-restock-title {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 90px;
+  margin-bottom: 30px;
+}
+
+.adm-restock-product-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.adm-restock-product {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+/* 1.1 image product */
+.adm-restock-image-container {
+  width: 120px;
+  height: 150px;
+}
+.adm-restock-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 1.2 text */
+.adm-restock-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.adm-restock-name,
+.adm-restock-stock {
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* 1.3 button */
+.adm-restock-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.adm-restock-add-50,
+.adm-restock-add-100 {
+  height: 30px;
+  width: 150px;
+  margin: 10px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  cursor: pointer;
+}

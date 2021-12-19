@@ -1,0 +1,193 @@
+/* 
+NOTES 
+1.1 order detail
+1.2 order item
+
+order detail always visible, order item only visible like pop-out
+*/
+
+.adm-manage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.adm-manage-lil {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.adm-manage-lil:hover .adm-manage-item-container {
+  /* font-size: 20px; */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 1.0 SELECT BUTTON */
+.adm-manage-select-container {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.adm-manage-select-1,
+.adm-manage-select-2 {
+  height: 30px;
+  margin: 0 5px;
+  padding: 0 10px;
+}
+.adm-manage-select-btn {
+  margin-left: 10px;
+}
+
+/* when hover order detail, order item appear */
+
+/* 1.1 ORDER DETAIL */
+.adm-manage-orderdetail {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.am-orderdetail-left {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.am-orderdetail-left-image-container {
+  width: 120px;
+  height: 150px;
+}
+.am-orderdetail-left-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.am-orderdetail-left-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.am-orderdetail-left-total,
+.am-orderdetail-left-status,
+.am-orderdetail-left-date {
+  font-family: "Montserrat";
+  font-size: 17px;
+}
+.am-orderdetail-left-date {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.am-orderdetail-left-total {
+  font-weight: 400;
+}
+
+/* 1.1.1 status */
+.am-orderdetail-left-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.am-orderdetail-left-status-pending {
+  text-transform: capitalize;
+  color: rgb(253, 49, 49);
+  font-weight: 600;
+  margin-left: 10px;
+}
+.am-orderdetail-left-status-accepted {
+  text-transform: capitalize;
+  color: rgb(39, 245, 46);
+  font-weight: 600;
+  margin-left: 10px;
+}
+.am-orderdetail-left-status-rejected {
+  text-transform: capitalize;
+  color: rgb(208, 145, 145);
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* 1.1.2 button accept / reject */
+.am-orderdetail-left-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin-left: 80px;
+}
+.am-orderdetail-left-button-accept,
+.am-orderdetail-left-button-reject {
+  font-family: "Montserrat";
+  width: 110px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  /* margin-bottom: 20px; */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s all ease-in-out;
+}
+.am-orderdetail-left-button-accept {
+  margin-bottom: 20px;
+  background-color: rgb(6, 251, 35);
+  color: black;
+  margin-top: 18px;
+}
+.am-orderdetail-left-button-accept:hover {
+  background-color: rgb(0, 186, 22);
+}
+
+.am-orderdetail-left-button-reject {
+  margin-bottom: 20px;
+  background-color: rgb(255, 40, 2);
+  color: black;
+}
+.am-orderdetail-left-button-reject:hover {
+  background-color: rgb(191, 29, 0);
+}
+
+/* 1.2 ORDER ITEM */
+.adm-manage-item-container {
+  position: absolute;
+  right: 0;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.adm-manage-item {
+  width: 450px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.adm-manage-item-text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.adm-manage-item-picture-container {
+  width: 90px;
+  height: 120px;
+}
+.adm-manage-item-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

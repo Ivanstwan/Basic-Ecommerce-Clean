@@ -1,0 +1,256 @@
+.shopping-cart {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  width: 100%;
+}
+
+/* 1. LEFT */
+.shopping-cart-left-container {
+  /* background-color: red; */
+  height: 800px;
+  width: 65%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.shopcart-left-text {
+  font-size: 30px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.shopcart-left-title-list {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+
+.shopcart-left-title {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.shopcart-left-title:nth-child(1) {
+  width: 50%;
+}
+
+.shopcart-left-title:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+
+.shopcart-left-title:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+.shopcart-left-title:nth-child(4) {
+  width: 15%;
+  text-align: end;
+}
+
+/* 1.1 CART ITEM */
+.shopcart-left-item-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopcart-left-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  border-bottom: 1px dashed black;
+  padding-bottom: 15px;
+}
+
+.shopcart-item-image-container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.shopcart-item-image {
+  width: 35%;
+  height: 200px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.shopcart-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shopcart-item-name {
+  width: 60%;
+  margin: 10px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.shopcart-item-price,
+.shopcart-item-qty,
+.shopcart-item-subtotal {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.shopcart-item-price {
+  width: 20%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.shopcart-item-qty {
+  width: 15%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.shopcart-item-input-qty {
+  width: 60px;
+  height: 15px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.shopcart-item-qty .fas {
+  margin-top: 4px;
+}
+
+.shopcart-item-subtotal {
+  width: 15%;
+  height: 160px;
+  text-align: end;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shopcart-item-subtotal .fas {
+  color: rgb(193, 4, 4);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 2. RIGHT */
+.shopping-cart-right-container {
+  width: 35%;
+  padding: 85px 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shopcart-right-box {
+  width: 100%;
+  /* background-color: red; */
+}
+
+.shopcart-right-box {
+  /* width: 100%; */
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.shopcart-box-title,
+.shopcart-box-shipping,
+.shopcart-box-subtotal,
+.shopcart-box-total {
+  font-family: "Montserrat";
+}
+
+.shopcart-box-title {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 20px;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.shopcart-box-subtotal,
+.shopcart-box-shipping {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shopcart-box-subtotal {
+  padding: 20px 20px 0px 20px;
+}
+
+.shopcart-box-shipping {
+  padding: 20px 20px 20px 20px;
+}
+
+.shopcart-box-total {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid rgb(184, 184, 184);
+}
+
+.shopcart-checkout-button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #b50000;
+  background-color: #b50000;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  margin-top: 10px;
+}
+
+.shopcart-checkout-button:hover {
+  background-color: rgb(52, 1, 1);
+}
+
+.shopcart-checkout-button-disabled {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #b50000a5;
+  background-color: #b500009e;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  margin-top: 10px;
+}
+
+/* err message */
+.user-cart-err-message {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  color: #d00505;
+  margin-top: 10px;
+}

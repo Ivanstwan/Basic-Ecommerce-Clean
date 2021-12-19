@@ -1,0 +1,138 @@
+.user-transaction {
+  width: 100%;
+}
+
+.user-transaction-container {
+  margin: 80px 60px 0 120px;
+}
+
+.ut-title {
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  display: flex;
+}
+
+/* 1.1 UT Card */
+.ut-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.ut-card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.ut-card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+}
+.ut-card-title-date {
+  font-size: 15px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.ut-card-title-status {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 20px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.stat-pending {
+  background-color: rgb(255, 240, 179);
+  color: rgb(250, 89, 29);
+}
+.stat-accepted {
+  background-color: rgb(1, 240, 9);
+  color: rgb(255, 255, 255);
+}
+.stat-rejected {
+  background-color: rgb(213, 31, 31);
+  color: rgb(255, 240, 240);
+}
+
+.ut-card-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.ut-card-image-container {
+  width: 130px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.ut-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ut-card-name {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  width: 600px;
+}
+.ut-card-name-product,
+.ut-card-name-product-price,
+.ut-card-name-product-other {
+  font-family: "Montserrat";
+}
+.ut-card-name-product {
+  font-size: 18px;
+  font-weight: 600;
+}
+.ut-card-name-product-price {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.ut-card-name-product-other {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.ut-card-total {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-left: 40px;
+  justify-content: center;
+  /* width: 100px; */
+  height: 150px;
+  border-left: 1px solid grey;
+}
+.ut-card-total-text,
+.ut-card-total-price {
+  font-family: "Montserrat";
+}
+.ut-card-total-text {
+  font-weight: 400;
+  font-size: 15px;
+}
+.ut-card-total-price {
+  font-weight: 600;
+  font-size: 17px;
+}

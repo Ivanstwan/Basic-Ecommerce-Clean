@@ -1,0 +1,86 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+/* TEXT */
+.contact-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-text-1 {
+  margin-top: 30px;
+  font-size: 14.5px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  word-spacing: 4px;
+  line-height: 1.5;
+}
+
+.contact-text-2 {
+  margin-top: 10px;
+  font-size: 14.5px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  word-spacing: 4px;
+  line-height: 1.5;
+}
+
+/* EMAIL */
+.contact-email-container {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.contact-email-1 {
+  margin-top: 10px;
+  font-size: 12.5px;
+  font-family: "Roboto Mono";
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  word-spacing: 4px;
+  line-height: 1.5;
+}
+
+.contact-email-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.contact-email-input-1 {
+  padding: 10px;
+  width: 60%;
+  font-family: "Roboto Mono";
+}
+
+.contact-email-input-button {
+  padding: 10px;
+  width: 35%;
+  font-family: "Roboto Mono";
+  border: none;
+  background-color: rgb(216, 215, 215);
+}
+
+.contact-email-input-button:hover {
+  cursor: pointer;
+  background-color: rgb(179, 177, 177);
+}
+
+/* ALERT EMAIL */
+.contact-email-alert {
+  color: rgb(250, 52, 52);
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  padding: 5px;
+}
