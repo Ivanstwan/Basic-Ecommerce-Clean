@@ -24,23 +24,18 @@ function UserCart(props) {
   let history = useHistory();
 
   useEffect(() => {
-    console.log(props, "use effect");
     getCartItems();
   }, []);
 
   const getCartItems = () => {
-    console.log("get cart items");
     Axios.get(`${URL_API}/product/getcartitems?user_id=${props.user.id}`)
       .then((res) => {
-        console.log(res);
-
         var totalHarga = 0;
 
         setDbData(res.data);
 
         const renderCart = res.data.map((data) => {
           totalHarga += totalHarga + data.quantity * data.selling_price;
-          console.log(totalHarga);
 
           if (data.quantity > data.stock) {
             setMessageErr(
@@ -132,11 +127,6 @@ function UserCart(props) {
     console.log(harga);
   };
 
-  const checkTarget = (e) => {
-    console.log(e);
-    // document.getElementById('itemKe1')
-  };
-
   return (
     <div className="shopping-cart">
       <div className="shopping-cart-left-container">
@@ -189,11 +179,6 @@ function UserCart(props) {
           onClick={() => {
             setSubmitLoading(false);
             setButtonMessage("Loading...");
-            console.log(Boolean(renderCartItems[0]));
-            console.log(submitLoading);
-            console.log(dbData, "[db data - on submit]");
-
-            console.log(typeof dbData);
 
             // make date format for mysql
             // 1. date format
@@ -201,13 +186,9 @@ function UserCart(props) {
             let todayDay = dateToday.getDate();
             let todayMonth = dateToday.getMonth() + 1;
             let todayYear = dateToday.getFullYear();
-            console.log(dateToday);
-            console.log(todayMonth);
-            console.log(todayYear);
 
             const dateMysqlFormat = `${todayYear}-${todayMonth}-${todayDay}`;
 
-            console.log(dateMysqlFormat);
             // 2. hour format
             let nowHour = dateToday.getHours();
             let nowMinute = dateToday.getMinutes();
@@ -215,13 +196,8 @@ function UserCart(props) {
 
             const hourMysqlFormat = `${nowHour}:${nowMinute}:${nowSecond}`;
 
-            console.log(hourMysqlFormat);
             // 3. combine both
             const dataDateMysql = `${dateMysqlFormat} ${hourMysqlFormat}`;
-
-            console.log(dataDateMysql.toString(), "[data date mysql]");
-
-            console.log(props.user.id, "[props check id user]");
 
             Axios.post(`${URL_API}/product/neworderdetails`, {
               order_status: "pending",
@@ -229,8 +205,6 @@ function UserCart(props) {
               userID: props.user.id,
             })
               .then((res) => {
-                console.log(res);
-                console.log(dbData, "[dbData]");
 
                 // total price
                 var total_price_db = 0;
@@ -243,8 +217,6 @@ function UserCart(props) {
                     order_detail_id: res.data.insertId,
                   })
                     .then((res) => {
-                      console.log(res);
-                      console.log(dbData[i], `[db data${i}]`);
                       // delete item in user cart
                       Axios.delete(
                         `${URL_API}/product/deleteitemcart?user_id=${dbData[i].user_id}&product_id=${dbData[i].product_id}`
@@ -254,7 +226,6 @@ function UserCart(props) {
                         `${URL_API}/product/getstockitem?product_name=${dbData[i].product_name}`
                       )
                         .then((res) => {
-                          console.log(res, "[res get product stock]");
                           // 1.b change stock after user order
                           Axios.patch(
                             `${URL_API}/product/patchstockitem?product_id=${
@@ -295,10 +266,6 @@ function UserCart(props) {
 }
 
 const mapStateToProps = ({ user }) => {
-  console.log("[mapState1 userFULL]", user);
-  console.log("[mapState1 loading]", user.loading);
-  console.log("[mapState1 role]", user.role);
-  console.log("[mapState1 email]", user.email);
   return {
     user,
   };

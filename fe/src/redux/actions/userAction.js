@@ -9,10 +9,8 @@ export const chgMsg = () => ({
 export const loading = (data) => ({ type: "LOADING", payload: data });
 
 export const changeMessage = () => {
-  console.log("redux chg msg");
   return async (dispatch) => {
     dispatch(chgMsg());
-    console.log("chg msg");
     try {
       dispatch({
         type: "MESSAGE_CHANGED_1",
@@ -30,17 +28,9 @@ export const changeMessage = () => {
 };
 
 export const userLogin = (data) => {
-  console.log("masuk REDUX 1.login");
-  console.log(data);
   return async (dispatch) => {
-    console.log("masuk REDUX 1.1 hold");
-    console.log(data);
     dispatch(loading(data));
-    console.log("masuk REDUX 1.3 localStorage");
-    console.log(`[REDUX data.token, set localStorage]`, data.token);
     localStorage.setItem("token", data.token);
-    console.log("masuk REDUX 2.loading");
-    console.log(data, "[check 'data' redux]");
     try {
       dispatch({
         type: "USER_LOGIN",
@@ -63,22 +53,19 @@ export const userLogin = (data) => {
 export const userKeepLoggedIn = () => {
   return async (dispatch) => {
     try {
-      console.log("masuk REDUX 1.get token");
       const token = localStorage.getItem("token");
       const header = {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       };
-      console.log("1.1 token get", token);
-      console.log("1.2 header get", header);
 
       const response = await Axios.post(
         `${URL_API}/user/keeploggedin`,
         {},
         header
       );
-      console.log(response, "[response]");
+
       dispatch({
         type: "USER_LOGIN",
         payload: {
@@ -99,7 +86,6 @@ export const userKeepLoggedIn = () => {
 };
 
 export const userLogout = () => {
-  console.log("[user action] user logout");
   return async (dispatch) => {
     try {
       localStorage.removeItem("token");

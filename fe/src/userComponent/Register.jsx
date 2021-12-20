@@ -32,15 +32,10 @@ function Register() {
     // CHECK EMAIL HAS BEEN REGISTERED
     Axios.get(`${URL_API}/user/checkemail?email=${userData.email}`)
       .then((res) => {
-        console.log(res.data, "[res data]");
         // 1.SUCCESS email havent registered, pass ok
         if (!Boolean(res.data[0]) && userData.password.length >= 8) {
-          console.log(res.data);
-          console.log("1 check email berhasil");
           Axios.post(`${URL_API}/user/register`, userData)
             .then((res) => {
-              console.log("res");
-              console.log(res);
               setTimeout(() => {
                 history.push("/regdone");
               }, 500);
@@ -52,15 +47,13 @@ function Register() {
         }
         // 2. email already registered, pass ok
         else if (Boolean(res.data[0]) && userData.password.length >= 8) {
-          console.log(res.data);
-          console.log("2 data no, pass yes");
+          // console.log("2 data no, pass yes");
           setEmailMsg("Email already registered.");
           setEmailMsgCheck(true);
         }
         // 3. email already registered, pass no
         else if (Boolean(res.data[0]) && userData.password.length < 8) {
-          console.log(res.data);
-          console.log("3 data no, pass no");
+          // console.log("3 data no, pass no");
           setEmailMsg("Email already registered.");
           setPasswordMsg("Password at least 8 character.");
           setEmailMsgCheck(true);
@@ -68,8 +61,7 @@ function Register() {
         }
         // 4. email ok, pass no
         else {
-          console.log(res.data);
-          console.log("4 data yes, pass no");
+          // console.log("4 data yes, pass no");
           setPasswordMsg("Password at least 8 character.");
           setPassMsgCheck(true);
         }

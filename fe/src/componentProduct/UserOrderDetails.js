@@ -37,11 +37,8 @@ function UserOrderDetails(props) {
   };
 
   const getUserTransaction = () => {
-    console.log(props.user, "[props user]");
     Axios.get(`${URL_API}/product/getusertransaction?userid=${props.user.id}`)
       .then((res) => {
-        console.log("test");
-        console.log(res, "[res get user transaction[");
         setUserTransaction(res.data);
 
         var orderDetailID = [];
@@ -100,10 +97,8 @@ function UserOrderDetails(props) {
               </div>
             );
           } else {
-            console.log("lol");
+            //console.log("else");
           }
-          // console.log(orderDetailID.includes(res.data[i].order_detail_id));
-          console.log(orderDetailID);
         }
 
         setRenderCard(renderOrder);
@@ -111,10 +106,6 @@ function UserOrderDetails(props) {
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  const patchOrderTotal = () => {
-    console.log("patch order total");
   };
 
   return (
@@ -169,10 +160,6 @@ function UserOrderDetails(props) {
 }
 
 const mapStateToProps = ({ user }) => {
-  console.log("[mapState1 userFULL]", user);
-  console.log("[mapState1 loading]", user.loading);
-  console.log("[mapState1 role]", user.role);
-  console.log("[mapState1 email]", user.email);
   return {
     user,
   };

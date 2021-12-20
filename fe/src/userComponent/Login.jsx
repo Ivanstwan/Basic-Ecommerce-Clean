@@ -12,7 +12,6 @@ import { userKeepLoggedIn } from "../redux/actions";
 function Login({ user }) {
   // REDUX
   useEffect(() => {
-    console.log("[useEffect user email]", user.email);
     const token = localStorage.getItem("token");
     if (user.email) {
       history.push("/");
@@ -23,7 +22,6 @@ function Login({ user }) {
   }, []);
   // REDUX
   const keepLogin = (e) => {
-    console.log(e, "[e]");
     dispatch(userKeepLoggedIn());
   };
 
@@ -47,8 +45,6 @@ function Login({ user }) {
   };
 
   const loginUser = () => {
-    console.log("[func loginUser log email]", email);
-    console.log("masuk func login");
     setLoading(true);
     // USER DATA WILL BE SENT
     const userLoginData = {
@@ -75,23 +71,12 @@ function Login({ user }) {
     }
     // 4. pass OK, email OK
     else if (password && email) {
-      console.log("email pass OK");
-      // console.log(userData);
       // condition
       Axios.get(`${URL_API}/user/checkuser?email=${email}`).then((res) => {
         if (res.data[0]) {
           Axios.post(`${URL_API}/user/login`, userLoginData)
             .then((res) => {
-              console.log("res", res);
-              // console.log(res.data);
-              console.log("[res.data[0]", res.data);
-
               if (res.data) {
-                console.log("[AXIOS get] user logged in");
-                console.log("[res.data] response AXIOS", res.data);
-                console.log(
-                  "[DESC] respon res.data berupa object yang dikirim oleh back-end (setelah ngecek ada data email pass di mysql)"
-                );
                 loginRedux(res.data);
                 setTimeout(() => {
                   history.push("/");
@@ -99,7 +84,6 @@ function Login({ user }) {
               }
               // 2. email ok, pass not ok
               else {
-                console.log("[AXIOS get] user or password not found");
                 setPassMsgCheck(true);
                 setPasswordMsg("Email and/or Password incorrect.");
                 setLoading(false);
@@ -107,9 +91,6 @@ function Login({ user }) {
             })
             // 3. email not ok OR/AND pass not ok
             .catch((err) => {
-              console.log("errdrr");
-              console.log(err);
-              console.log("[AXIOS get] user or password not found");
               setPassMsgCheck(true);
               setPasswordMsg("Email and/or Password incorrect.");
               setLoading(false);
@@ -132,7 +113,6 @@ function Login({ user }) {
 
   // user-login REDUX, bsa pake ini jga (cara ke-2)
   const loginRedux = (e) => {
-    console.log(e, "[e]");
     dispatch(userLogin(e));
   };
 
@@ -223,10 +203,6 @@ function Login({ user }) {
 }
 
 const mapStateToProps = ({ user }) => {
-  console.log("[mapState1 userFULL]", user);
-  console.log("[mapState1 loading]", user.loading);
-  console.log("[mapState1 role]", user.role);
-  console.log("[mapState1 email]", user.email);
   return {
     user,
   };

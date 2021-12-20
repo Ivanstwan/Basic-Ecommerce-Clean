@@ -14,11 +14,6 @@ function Verification(props) {
   let history = useHistory();
 
   useEffect(() => {
-    console.log("masuk axios");
-    console.log(props);
-    console.log(props.match);
-    console.log(props.match.params.token);
-    // console.log(verifyState);
     Axios.patch(
       `${URL_API}/user/verified`,
       {},
@@ -29,7 +24,6 @@ function Verification(props) {
       }
     )
       .then((res) => {
-        console.log("res 1");
         setVerifyState({
           message: "Your Account is Verified",
           verify: true,
@@ -42,7 +36,6 @@ function Verification(props) {
       })
       .catch((err) => {
         console.log(err);
-        console.log("error cuy");
         setVerifyState({ message: "Failed to Verified Account" });
       });
     // eslint-disable-next-line
@@ -63,10 +56,6 @@ function Verification(props) {
   );
 }
 const mapStateToProps = ({ user }) => {
-  console.log("[mapState1 userFULL]", user);
-  console.log("[mapState1 loading]", user.loading);
-  console.log("[mapState1 role]", user.role);
-  console.log("[mapState1 email]", user.email);
   return {
     user,
   };
