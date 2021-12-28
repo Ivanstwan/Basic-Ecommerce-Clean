@@ -15,4 +15,7 @@ routers.post("/login", userController.loginUser);
 // keep logged in
 routers.post("/keeploggedin", checkToken, userController.keepLoggedIn);
 
+// PORTFOLIO
+routers.post("/portofolio", userController);
+
 module.exports = routers;

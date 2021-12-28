@@ -4,6 +4,11 @@ const { createJWTToken } = require("../helper/jwt");
 const transporter = require("../helper/nodemailer");
 
 module.exports = {
+  sendEmailPortfolio: (req, res) => {
+    console.log(req.body);
+
+    const mail
+  },
   registerUser: async (req, res) => {
     const { password, email } = req.body;
 
